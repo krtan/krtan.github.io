@@ -11,25 +11,23 @@
 
 <body>
 	<div id='app'>
-		<navbar href="https://krtan.github.io" src="https://bulma.io/images/bulma-logo.png">
-			<navlink href='https://github.com/krtan'>Home</navlink>
-			<navlink href='https://github.com/krtan'>About</navlink>
-		</navbar>
-		<blog-list></blog-list>
+		<header>
+			<navbar href="https://krtan.github.io" src="https://bulma.io/images/bulma-logo.png">
+				<navlink href='https://github.com/krtan'>Home</navlink>
+				<navlink href='https://github.com/krtan'>About</navlink>
+			</navbar>
+		</header>
+		<main>
+			<blog-list></blog-list>
+		</main>
+		<footer>
+			<footer-nav>
+				<footer-link icon="github" href="https://github.com/krtan"></footer-link>
+				<footer-link icon="linkedin" href="https://linkedin.com/in/kevin-tan-b1a40a149/"></footer-link>
+				<footer-link icon="treehouse" href="https://teamtreehouse.com/krtan"></footer-link>
+			</footer-nav>
+		</footer>
 	</div>
-    
-    <main id="mainRoot">
-		{{ message }}
-    </main>
-    
-    <footer id="footerRoot">
-		<div class="footer_container">
-			<div id="footer_externalURLs">
-				<a v-for="url in externalURLs" target="_blank" v-bind:href="url.hyperlink"><i class="svg-icon" v-bind:class="url.css_icon"></i></a>
-			</div>
-		</div>
-    </footer>
-    
     <script src="js/main.js"></script>
 </body>
 

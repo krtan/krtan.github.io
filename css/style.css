@@ -1,9 +1,10 @@
 body {
-margin: 0px;
-padding: 20px;
+	background: #262626;
+	margin: 0px;
+	padding: 10px;
 }
 //#app * { padding: 1px; margin: 1px; border: 1px; border-style: solid; border-color: black; }
-/* Header */
+/* Header 
 .header {
 	flex-grow: 1;
 	margin: auto;
@@ -51,17 +52,22 @@ padding: 20px;
 	-webkit-box-shadow: 0px 1px 3px #444444;
 	-moz-box-shadow: 0px 1px 3px #444444;
 }
-
+/* Main */
+main {
+	padding: 10px 0px 10px 0px;
+}
 /* Footer */
-.footer_container {
+footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: black;
+	background: #363636;
 }
-#footer_externalURLs {
+#footer-nav {
 	display: inline-block;
-	border: 1px;
+	justify-content: center;
+	align-items: center;
+	border: 0px;
 	margin: auto;
 	border-style: solid;
 	border-color: rgb(255,255,255,.12);
@@ -72,6 +78,7 @@ padding: 20px;
     width: 32px;
     height: 32px;
     display: inline-block;
+    border: 2px;
     background-size: contain;
 }
 
