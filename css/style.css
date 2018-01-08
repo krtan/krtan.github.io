@@ -1,5 +1,73 @@
-/* SVG Icons */
+body {
+margin: 0px;
+padding: 20px;
+}
+//#app * { padding: 1px; margin: 1px; border: 1px; border-style: solid; border-color: black; }
+/* Header */
+.header {
+	flex-grow: 1;
+	margin: auto;
+}
+.header.container {
+	display: flex;
+	align-items:center;
+	border: 2px;
+	border-color: blue;
+}
+.header.banner {
+	display: flex;
+	align-items: center;
+	//border: 1px;
+	//border-style: solid;
+	//border-color: black;
+}
+#header_logo {
+	height: 28px;
+	width: 28px;
+	padding: 0px;
+}
+#header_title {
+	padding: 6px;
+	font-size: 14px;
+    font-family: Arial;
+}
+.header.navlink {
+	display: flex;
+	align-items: center;
+}
+.header.navlink a {
+	display: inline-block;
+	font-size: 14px;
+    font-family: Arial;
+	color: #ffffff;
+	text-decoration: none;
+	padding: 5px 10px 5px 10px;
+	background: #606060;
+	background-image: -webkit-linear-gradient(top, #606060, #303030);
+	background-image: -moz-linear-gradient(top, #606060, #303030);
+	background-image: -ms-linear-gradient(top, #606060, #303030);
+	background-image: -o-linear-gradient(top, #606060, #303030);
+	background-image: linear-gradient(to bottom, #606060, #303030);
+	-webkit-box-shadow: 0px 1px 3px #444444;
+	-moz-box-shadow: 0px 1px 3px #444444;
+}
 
+/* Footer */
+.footer_container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: black;
+}
+#footer_externalURLs {
+	display: inline-block;
+	border: 1px;
+	margin: auto;
+	border-style: solid;
+	border-color: rgb(255,255,255,.12);
+}
+
+/* SVG Icons */
 .svg-icon {
     width: 32px;
     height: 32px;
