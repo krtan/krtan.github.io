@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css">
+    <title>Video Modal</title>
+</head>
+<body>
+    <div class="container">
+        <div id="video-player-container" class="modal">
+            <div class="modal-background" onclick="close_video();"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p id="video-title" class="modal-card-title">Modal title</p>
+                </header>
+                <section class="modal-card-body">
+                    <video id="video-player" width="320" height="240" autoplay controls>
+                        <source id='video-source'></source>
+                        Your browser does not support the video tag.
+                    </video>
+                </section>
+            </div>
+        </div>
+        <a id="video1" onclick="open_video('video1');" href="#video-player">Ex.01</a></br>
+        <a id="video2" onclick="open_video('video2');" href="#video-player">Ex.02</a>
+    </div>
+    
+    <script type="text/javascript">
+        function open_video(video_id) {
+            // Change video title and set video_path
+            var video_title = document.getElementById('video-title');
+            if (video_id == "video1") {
+                video_title.textContent = "Example Video 1";
+                video_path = "video1.mp4";
+            } else if (video_id == "video2") {
+                video_title.textContent = "Example Video 2";
+                video_path = "video2.mp4";
+            }
+            // Starts the video player and plays passed in argument
+            var video_player = document.getElementById('video-player');
+            var video_source = document.getElementById('video-source');
+            video_player.pause();
+            video_source.setAttribute('src', video_path);
+            video_player.load();
+            video_player.play();
+            // Show the modal window
+            var video_player_container = document.getElementById('video-player-container');
+            video_player_container.classList.add("is-active");
+        }
+        function close_video() {
+            // Stop the video player from playing anything
+            var video_player = document.getElementById('video-player');
+            var video_source = document.getElementById('video-source');
+            var video_path = '';
+            video_player.pause();
+            video_source.setAttribute('src', video_path);
+            video_player.load();
+            // Hide the modal window
+            var video_player_container = document.getElementById('video-player-container');
+            video_player_container.classList.remove("is-active");
+        }
+    </script>
+    <style>
+        #video-player {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</body>
+</html>
