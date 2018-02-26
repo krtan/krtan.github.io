@@ -41,12 +41,13 @@ Vue.component('navlink', {
 Vue.component('blog-list', {
 	template: `
 		<div class="blog-list">
-			<blog-post v-for="post in blogList" :key="post.title" :title="post.title" :date="post.date" :time="post.time" :author="post.author" :tags="post.tags">{{ post.body }}</blog-post>
+			<blog-post v-for="post in blogList" :key="post.title" :title="post.title" :date="post.date" :time="post.time" :author="post.author" :tags="post.tags"><span v-html="post.body"></span></blog-post>
 		</div>
 	`,
 	data() {
 		return {
 			blogList: [
+                {date: '02/25/18', time: '11:50pm', author: 'KRTan', title: 'Video Modal', body: "<a href='./webdev_sandbox/VideoModal/index.html'>Video Modal Example</a>", tags: '',},
 				{date: '12/15/17', time: '1:00pm', author: 'Billy', title: 'I Hate Joe', body: 'I hate that Joe, Henry is a cool guy.', tags: '',},
 				{date: '12/14/17', time: '1:10pm', author: 'Joe', title: 'I Hate Henry', body: 'I hate that Henry, Carl is a cool guy.', tags: '',},
 				{date: '12/13/17', time: '1:20pm', author: 'Henry', title: 'I Hate Carl', body: 'I hate that Carl, always ending with emotes.', tags: '',},
